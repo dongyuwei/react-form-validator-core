@@ -17,6 +17,8 @@ class ValidatorForm extends React.Component {
                 extra = validator.substring(splitIdx + 1);
             }
             result = Rules[name](value, extra);
+        } else {
+            result = Rules[name](value);
         }
         return result;
     }
